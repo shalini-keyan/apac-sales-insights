@@ -7,6 +7,10 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DEPLOY_DIR="/tmp/anz-sales-insights-deploy"
 PYTHON=/Users/shalini.keyan/.local/bin/python3.12
 
+echo "📡 Extracting signals from apac-insights-hub..."
+$PYTHON "$SCRIPT_DIR/extract-signals.py"
+
+echo ""
 echo "📊 Generating rep data..."
 $PYTHON "$SCRIPT_DIR/generate-rep-data.py"
 

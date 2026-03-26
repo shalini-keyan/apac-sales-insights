@@ -1,0 +1,1358 @@
+{
+  "total": 80,
+  "by_ae": {
+    "Shane Kilgour": {
+      "mqa": [
+        {
+          "account": "qut",
+          "website": "qut.edu.au",
+          "industry": "Education",
+          "region": "ANZ",
+          "engagement": [
+            "Engagement score: 899 pts this week \u00b7 3,846 page visits in last 30 days",
+            "Viewed: Enterprise overview",
+            "Viewed: Free trial page",
+            "Viewed: Point of Sale overview",
+            "Viewed: Pricing page",
+            "Searching for: ai chatbot, large language models",
+            "Last active: 2026-03-21",
+            "Pipeline predict score: 87%"
+          ],
+          "note": "Hit MQA with zero sales touches. Primary intent: ai chatbot.",
+          "days": 0,
+          "id": 1
+        },
+        {
+          "account": "Monash University",
+          "website": "monash.edu",
+          "industry": "Education",
+          "region": "ANZ",
+          "engagement": [
+            "Engagement score: 816 pts this week \u00b7 3,723 page visits in last 30 days",
+            "Viewed: Enterprise overview",
+            "Viewed: Free trial page",
+            "Viewed: Point of Sale overview",
+            "Viewed: Pricing page",
+            "Searching for: ai chatbot, large language models",
+            "Last active: 2026-03-21",
+            "Pipeline predict score: 82%"
+          ],
+          "note": "Hit MQA with zero sales touches. Primary intent: ai chatbot.",
+          "days": 0,
+          "id": 2
+        }
+      ],
+      "lost": [
+        {
+          "account": "Bellroy Pty Ltd",
+          "website": "",
+          "industry": "",
+          "region": "ANZ",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Searching for: agentic commerce, ai chatbot, ai commerce, ai driven personalization"
+          ],
+          "note": "Active SAL Opportunity \u2014 visiting Shopify.com this week. 3 sales touches in last 14 days. Strong signal to reach out now.",
+          "days": 0,
+          "id": 25
+        },
+        {
+          "account": "The Lottery",
+          "website": "",
+          "industry": "",
+          "region": "ANZ",
+          "engagement": [
+            "Viewed: Contact sales",
+            "Viewed: Free trial page",
+            "Viewed: Pricing page",
+            "Searching for: agentic commerce, ai chatbot, ai driven personalization, ai generated product recommendations"
+          ],
+          "note": "Active SAL Opportunity \u2014 visiting Shopify.com this week. 12 sales touches in last 14 days. Strong signal to reach out now.",
+          "days": 0,
+          "id": 30
+        },
+        {
+          "account": "Event Hospitality & Entertainment",
+          "website": "",
+          "industry": "",
+          "region": "ANZ",
+          "engagement": [
+            "Viewed: Free trial page"
+          ],
+          "note": "Active SAL Opportunity \u2014 visiting Shopify.com this week. 1 sales touch in last 14 days. Strong signal to reach out now.",
+          "days": 0,
+          "id": 32
+        },
+        {
+          "account": "Fletcher Building",
+          "website": "",
+          "industry": "",
+          "region": "ANZ",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Viewed: Pricing page",
+            "Searching for: ai chatbot, ai search, large language models"
+          ],
+          "note": "Active SAL Opportunity \u2014 visiting Shopify.com this week. Check salesforce for last touch date. Strong signal to reach out now.",
+          "days": 0,
+          "id": 34
+        }
+      ],
+      "new": [
+        {
+          "account": "Hanes Brands Australasia",
+          "website": "",
+          "industry": "",
+          "region": "APAC",
+          "engagement": [
+            "New contact: Christie Madsen (head of marketing)",
+            "First ever engagement: 2026-03-18",
+            "Also new this week: Joanne Knight"
+          ],
+          "note": "2 new contacts engaging for the first time this week. Combined engagement: 17.5 pts.",
+          "days": 0,
+          "id": 42
+        },
+        {
+          "account": "Sheridan",
+          "website": "",
+          "industry": "",
+          "region": "APAC",
+          "engagement": [
+            "New contact: mark brennan (Sheridan Online Trading Manager)",
+            "First ever engagement: 2026-03-18"
+          ],
+          "note": "1 new contact engaging for the first time this week. Combined engagement: 6.2 pts.",
+          "days": 0,
+          "id": 50
+        },
+        {
+          "account": "Spotlight Retail Group",
+          "website": "",
+          "industry": "",
+          "region": "APAC",
+          "engagement": [
+            "New contact: Jeremy Shane (UX Manager)",
+            "First ever engagement: 2026-03-18"
+          ],
+          "note": "1 new contact engaging for the first time this week. Combined engagement: 6.2 pts.",
+          "days": 0,
+          "id": 51
+        }
+      ],
+      "eng": [],
+      "unm": []
+    },
+    "Nikhil Sareen": {
+      "mqa": [
+        {
+          "account": "Physics Wallah",
+          "website": "http://pw.live",
+          "industry": "Education",
+          "region": "India",
+          "engagement": [
+            "Engagement score: 753 pts this week \u00b7 2,392 page visits in last 30 days",
+            "Viewed: Enterprise overview",
+            "Viewed: Free trial page",
+            "Viewed: Contact sales",
+            "Viewed: Pricing page",
+            "Searching for: large language models, ai chatbot, ai search",
+            "Last active: 2026-03-21",
+            "Pipeline predict score: 79%"
+          ],
+          "note": "Hit MQA with zero sales touches. Primary intent: large language models.",
+          "days": 0,
+          "id": 3
+        },
+        {
+          "account": "Cashify",
+          "website": "http://cashify.in",
+          "industry": "Services",
+          "region": "India",
+          "engagement": [
+            "Engagement score: 386 pts this week \u00b7 1,366 page visits in last 30 days",
+            "Viewed: Enterprise overview",
+            "Viewed: Free trial page",
+            "Viewed: Pricing page",
+            "Viewed: Solutions",
+            "Searching for: large language models, ai search, ai chatbot",
+            "Last active: 2026-03-21",
+            "Pipeline predict score: 78%"
+          ],
+          "note": "Hit MQA with zero sales touches. Primary intent: large language models.",
+          "days": 0,
+          "id": 7
+        },
+        {
+          "account": "sbdinc",
+          "website": "stanleyblackanddecker.com",
+          "industry": "Construction & Industrial",
+          "region": "India",
+          "engagement": [
+            "Engagement score: 328 pts this week \u00b7 1,243 page visits in last 30 days",
+            "Viewed: Free trial page",
+            "Viewed: Pricing page",
+            "Viewed: Shopify Plus overview",
+            "Viewed: Enterprise overview",
+            "Searching for: large language models, ai chatbot",
+            "Last active: 2026-03-21",
+            "Pipeline predict score: 69%"
+          ],
+          "note": "Hit MQA with zero sales touches. Primary intent: large language models.",
+          "days": 0,
+          "id": 8
+        },
+        {
+          "account": "Cars24",
+          "website": "http://cars24.com",
+          "industry": "Vehicles & Parts",
+          "region": "India",
+          "engagement": [
+            "Engagement score: 318 pts this week \u00b7 1,012 page visits in last 30 days",
+            "Viewed: Free trial page",
+            "Viewed: Enterprise overview",
+            "Viewed: Pricing page",
+            "Viewed: Solutions",
+            "Searching for: large language models, ai chatbot",
+            "Last active: 2026-03-21",
+            "Pipeline predict score: 78%"
+          ],
+          "note": "Hit MQA with zero sales touches. Primary intent: large language models.",
+          "days": 0,
+          "id": 9
+        },
+        {
+          "account": "Reliance Industries Ltd",
+          "website": "ril.com",
+          "industry": "Services",
+          "region": "India",
+          "engagement": [
+            "Engagement score: 204 pts this week \u00b7 713 page visits in last 30 days",
+            "Viewed: Blog",
+            "Viewed: Free trial page",
+            "Viewed: Pricing page",
+            "Searching for: large language models, ai chatbot",
+            "Last active: 2026-03-21",
+            "Pipeline predict score: 84%"
+          ],
+          "note": "Hit MQA with zero sales touches. Primary intent: large language models.",
+          "days": 0,
+          "id": 11
+        },
+        {
+          "account": "Zepto",
+          "website": "http://zeptonow.com",
+          "industry": "Media & Communication",
+          "region": "India",
+          "engagement": [
+            "Engagement score: 117 pts this week \u00b7 352 page visits in last 30 days",
+            "Viewed: Free trial page",
+            "Viewed: Pricing page",
+            "Searching for: large language models, ai chatbot, ai search",
+            "Last active: 2026-03-21",
+            "Pipeline predict score: 64%"
+          ],
+          "note": "Hit MQA with zero sales touches. Primary intent: large language models.",
+          "days": 0,
+          "id": 17
+        },
+        {
+          "account": "1mg",
+          "website": "1mg.com",
+          "industry": "Media & Communication",
+          "region": "India",
+          "engagement": [
+            "Engagement score: 104 pts this week \u00b7 393 page visits in last 30 days",
+            "Viewed: Free trial page",
+            "Searching for: large language models, ai chatbot",
+            "Last active: 2026-03-21",
+            "Pipeline predict score: 40%"
+          ],
+          "note": "Hit MQA with zero sales touches. Primary intent: large language models.",
+          "days": 0,
+          "id": 18
+        },
+        {
+          "account": "Petronas",
+          "website": "petronas.com",
+          "industry": "Construction & Industrial",
+          "region": "SEA/ROA",
+          "engagement": [
+            "Engagement score: 85 pts this week \u00b7 401 page visits in last 30 days",
+            "Viewed: Free trial page",
+            "Viewed: Pricing page",
+            "Searching for: large language models, ai chatbot",
+            "Last active: 2026-03-21",
+            "Pipeline predict score: 72%"
+          ],
+          "note": "Hit MQA with zero sales touches. Primary intent: large language models.",
+          "days": 0,
+          "id": 20
+        }
+      ],
+      "lost": [
+        {
+          "account": "Jaipur Rugs",
+          "website": "",
+          "industry": "",
+          "region": "India",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Viewed: Shopify Plus overview",
+            "Viewed: Pricing page"
+          ],
+          "note": "Active SAL Opportunity \u2014 visiting Shopify.com this week. Check salesforce for last touch date. Strong signal to reach out now.",
+          "days": 0,
+          "id": 31
+        }
+      ],
+      "new": [
+        {
+          "account": "sephora",
+          "website": "",
+          "industry": "",
+          "region": "APAC",
+          "engagement": [
+            "New contact: Youri ZAHKVATOV (Director, Data Analytics &amp Reports EME)",
+            "First ever engagement: 2026-03-18",
+            "Also new this week: Chrystos PADONOU, Marin CHABOUREAU"
+          ],
+          "note": "4 new contacts engaging for the first time this week. Combined engagement: 5.4 pts.",
+          "days": 0,
+          "id": 53
+        }
+      ],
+      "eng": [
+        {
+          "account": "Mahindra Electric Automobile",
+          "website": "",
+          "industry": "",
+          "region": "India",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Viewed: Pricing page"
+          ],
+          "note": "3 distinct Shopify page(s) visited this week, zero sales touches. Engagement score: 87 pts.",
+          "days": 0,
+          "id": 64
+        },
+        {
+          "account": "Hero Moto Corp",
+          "website": "",
+          "industry": "",
+          "region": "India",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Viewed: Pricing page"
+          ],
+          "note": "2 distinct Shopify page(s) visited this week, zero sales touches. Engagement score: 61 pts.",
+          "days": 0,
+          "id": 72
+        },
+        {
+          "account": "Secure Meters Pvt Ltd.",
+          "website": "",
+          "industry": "",
+          "region": "India",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Viewed: Pricing page"
+          ],
+          "note": "2 distinct Shopify page(s) visited this week, zero sales touches. Engagement score: 43 pts.",
+          "days": 0,
+          "id": 80
+        }
+      ],
+      "unm": []
+    },
+    "Lauren Critten": {
+      "mqa": [
+        {
+          "account": "University of Adelaide",
+          "website": "adelaide.edu.au",
+          "industry": "Education",
+          "region": "ANZ",
+          "engagement": [
+            "Engagement score: 688 pts this week \u00b7 2,899 page visits in last 30 days",
+            "Viewed: Contact sales",
+            "Viewed: Free trial page",
+            "Viewed: Pricing page",
+            "Searching for: large language models, ai chatbot, ai search",
+            "Last active: 2026-03-21",
+            "Pipeline predict score: 69%"
+          ],
+          "note": "Hit MQA with zero sales touches. Primary intent: large language models.",
+          "days": 0,
+          "id": 4
+        },
+        {
+          "account": "Griffith University",
+          "website": "http://griffith.edu.au",
+          "industry": "Services",
+          "region": "ANZ",
+          "engagement": [
+            "Engagement score: 181 pts this week \u00b7 1,044 page visits in last 30 days",
+            "Viewed: Contact sales",
+            "Viewed: Free trial page",
+            "Viewed: Pricing page",
+            "Viewed: Blog",
+            "Searching for: ai chatbot, large language models",
+            "Last active: 2026-03-21",
+            "Pipeline predict score: 77%"
+          ],
+          "note": "Hit MQA with zero sales touches. Primary intent: ai chatbot.",
+          "days": 0,
+          "id": 12
+        }
+      ],
+      "lost": [
+        {
+          "account": "MYER",
+          "website": "",
+          "industry": "",
+          "region": "ANZ",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Viewed: Pricing page"
+          ],
+          "note": "Active SAL Opportunity \u2014 visiting Shopify.com this week. 17 sales touches in last 14 days. Strong signal to reach out now.",
+          "days": 0,
+          "id": 27
+        }
+      ],
+      "new": [
+        {
+          "account": "Columbus",
+          "website": "",
+          "industry": "",
+          "region": "APAC",
+          "engagement": [
+            "New contact: Magnus Oxenwaldt (Director, Ai & Digital Transformation)",
+            "First ever engagement: 2026-03-16",
+            "Viewed: Free trial page"
+          ],
+          "note": "1 new contact engaging for the first time this week. Combined engagement: 9.4 pts.",
+          "days": 0,
+          "id": 48
+        }
+      ],
+      "eng": [
+        {
+          "account": "Black Dog Institute",
+          "website": "",
+          "industry": "",
+          "region": "ANZ",
+          "engagement": [
+            "Viewed: Contact sales",
+            "Viewed: Free trial page",
+            "Viewed: Pricing page",
+            "Searching for: agentic commerce, ai chatbot, ai powered shopping, ai search"
+          ],
+          "note": "3 distinct Shopify page(s) visited this week, zero sales touches. Engagement score: 154 pts.",
+          "days": 0,
+          "id": 62
+        },
+        {
+          "account": "element14",
+          "website": "",
+          "industry": "",
+          "region": "ANZ",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Viewed: Shopify Plus overview",
+            "Viewed: Pricing page",
+            "Searching for: agentic commerce, ai chatbot, ai commerce, ai driven personalization"
+          ],
+          "note": "4 distinct Shopify page(s) visited this week, zero sales touches. Engagement score: 67 pts.",
+          "days": 0,
+          "id": 69
+        }
+      ],
+      "unm": []
+    },
+    "Bronte Hogarth": {
+      "mqa": [
+        {
+          "account": "Aussie Broadband",
+          "website": "aussiebroadband.com.au",
+          "industry": "Media & Communication",
+          "region": "ANZ",
+          "engagement": [
+            "Engagement score: 526 pts this week \u00b7 1,938 page visits in last 30 days",
+            "Viewed: Free trial page",
+            "Viewed: Shopify Plus overview",
+            "Viewed: Point of Sale overview",
+            "Viewed: Pricing page",
+            "Searching for: large language models, ai chatbot",
+            "Last active: 2026-03-21",
+            "Pipeline predict score: 68%"
+          ],
+          "note": "Hit MQA with zero sales touches. Primary intent: large language models.",
+          "days": 0,
+          "id": 5
+        }
+      ],
+      "lost": [
+        {
+          "account": "The Whisky Club",
+          "website": "",
+          "industry": "",
+          "region": "ANZ",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Searching for: agentic commerce, ai chatbot, ai commerce, ai search"
+          ],
+          "note": "Active SAL Opportunity \u2014 visiting Shopify.com this week. 4 sales touches in last 14 days. Strong signal to reach out now.",
+          "days": 0,
+          "id": 37
+        },
+        {
+          "account": "Swann Communications",
+          "website": "",
+          "industry": "",
+          "region": "ANZ",
+          "engagement": [
+            "Viewed: Free trial page"
+          ],
+          "note": "Active SAL Opportunity \u2014 visiting Shopify.com this week. 35 sales touches in last 14 days. Strong signal to reach out now.",
+          "days": 0,
+          "id": 40
+        }
+      ],
+      "new": [
+        {
+          "account": "The Whisky Club",
+          "website": "",
+          "industry": "",
+          "region": "APAC",
+          "engagement": [
+            "New contact: Scott Fitzsimons (Club Experience Manager)",
+            "First ever engagement: 2026-02-27",
+            "Viewed: Free trial page"
+          ],
+          "note": "1 new contact engaging for the first time this week. Combined engagement: 6.2 pts.",
+          "days": 0,
+          "id": 49
+        },
+        {
+          "account": "Zilco International",
+          "website": "",
+          "industry": "",
+          "region": "APAC",
+          "engagement": [
+            "New contact: Saleem Shaik (IT Manager)",
+            "First ever engagement: 2026-03-19"
+          ],
+          "note": "1 new contact engaging for the first time this week. Combined engagement: 6.2 pts.",
+          "days": 0,
+          "id": 52
+        }
+      ],
+      "eng": [],
+      "unm": []
+    },
+    "Anwei Sun": {
+      "mqa": [
+        {
+          "account": "The University of Hong Kong",
+          "website": "hku.hk",
+          "industry": "Education",
+          "region": "GCR",
+          "engagement": [
+            "Engagement score: 520 pts this week \u00b7 3,842 page visits in last 30 days",
+            "Viewed: Blog",
+            "Viewed: Free trial page",
+            "Viewed: Enterprise overview",
+            "Viewed: Pricing page",
+            "Searching for: ai chatbot, large language models",
+            "Last active: 2026-03-21",
+            "Pipeline predict score: 75%"
+          ],
+          "note": "Hit MQA with zero sales touches. Primary intent: ai chatbot.",
+          "days": 0,
+          "id": 6
+        }
+      ],
+      "lost": [],
+      "new": [],
+      "eng": [],
+      "unm": []
+    },
+    "Karim Lalji": {
+      "mqa": [
+        {
+          "account": "Jacks of Fiji",
+          "website": "jacksfiji.com",
+          "industry": "Apparel & Accessories",
+          "region": "SEA/ROA",
+          "engagement": [
+            "Engagement score: 221 pts this week \u00b7 1,569 page visits in last 30 days",
+            "Viewed: Free trial page",
+            "Searching for: ai chatbot, large language models, social commerce",
+            "Last active: 2026-03-21",
+            "Pipeline predict score: 39%"
+          ],
+          "note": "Hit MQA with zero sales touches. Primary intent: ai chatbot.",
+          "days": 0,
+          "id": 10
+        },
+        {
+          "account": "Valiram Group",
+          "website": "valiram.com",
+          "industry": "Apparel & Accessories",
+          "region": "SEA/ROA",
+          "engagement": [
+            "Engagement score: 177 pts this week \u00b7 519 page visits in last 30 days",
+            "Viewed: Free trial page",
+            "Viewed: Pricing page",
+            "Viewed: Enterprise overview",
+            "Viewed: Shopify Plus overview",
+            "Searching for: ai search, large language models, social commerce",
+            "Last active: 2026-03-21",
+            "Pipeline predict score: 61%"
+          ],
+          "note": "Hit MQA with zero sales touches. Primary intent: ai search.",
+          "days": 0,
+          "id": 13
+        },
+        {
+          "account": "foodpanda",
+          "website": "foodpanda.pk",
+          "industry": "Food & Beverage (excl. Alcohol)",
+          "region": "SEA/ROA",
+          "engagement": [
+            "Engagement score: 173 pts this week \u00b7 887 page visits in last 30 days",
+            "Viewed: Free trial page",
+            "Viewed: Pricing page",
+            "Searching for: large language models, dropshipping, cloud based ecommerce platform",
+            "Last active: 2026-03-21",
+            "Pipeline predict score: 48%"
+          ],
+          "note": "Hit MQA with zero sales touches. Primary intent: large language models.",
+          "days": 0,
+          "id": 14
+        }
+      ],
+      "lost": [
+        {
+          "account": "StarHub Mobile Pte Ltd",
+          "website": "",
+          "industry": "",
+          "region": "SEA/ROA",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Viewed: Pricing page",
+            "Viewed: Shopify Plus overview",
+            "Viewed: Point of Sale overview",
+            "Searching for: ai chatbot, large language models"
+          ],
+          "note": "Active SAL Opportunity \u2014 visiting Shopify.com this week. 21 sales touches in last 14 days. Strong signal to reach out now.",
+          "days": 0,
+          "id": 26
+        }
+      ],
+      "new": [],
+      "eng": [
+        {
+          "account": "Siam Cement PCL",
+          "website": "",
+          "industry": "",
+          "region": "APAC",
+          "engagement": [
+            "Viewed: Free trial page"
+          ],
+          "note": "2 distinct Shopify page(s) visited this week, zero sales touches. Engagement score: 52 pts.",
+          "days": 0,
+          "id": 77
+        },
+        {
+          "account": "Lixibox",
+          "website": "",
+          "industry": "",
+          "region": "APAC",
+          "engagement": [
+            "Viewed: Enterprise overview",
+            "Viewed: Free trial page"
+          ],
+          "note": "2 distinct Shopify page(s) visited this week, zero sales touches. Engagement score: 45 pts.",
+          "days": 0,
+          "id": 79
+        }
+      ],
+      "unm": []
+    },
+    "Rae Chang": {
+      "mqa": [
+        {
+          "account": "Tencent Holdings Ltd \u817e\u8baf",
+          "website": "tencent.com",
+          "industry": "Media & Communication",
+          "region": "GCR",
+          "engagement": [
+            "Engagement score: 162 pts this week \u00b7 451 page visits in last 30 days",
+            "Viewed: Free trial page",
+            "Viewed: Enterprise overview",
+            "Searching for: large language models, ai chatbot, ai search",
+            "Last active: 2026-03-21",
+            "Pipeline predict score: 42%"
+          ],
+          "note": "Hit MQA with zero sales touches. Primary intent: large language models.",
+          "days": 0,
+          "id": 15
+        },
+        {
+          "account": "Huawei Technologies Co., Ltd.",
+          "website": "huawei.com",
+          "industry": "Media & Communication",
+          "region": "GCR",
+          "engagement": [
+            "Engagement score: 152 pts this week \u00b7 657 page visits in last 30 days",
+            "Viewed: Free trial page",
+            "Viewed: Point of Sale overview",
+            "Viewed: Pricing page",
+            "Searching for: large language models",
+            "Last active: 2026-03-21",
+            "Pipeline predict score: 78%"
+          ],
+          "note": "Hit MQA with zero sales touches. Primary intent: large language models.",
+          "days": 0,
+          "id": 16
+        }
+      ],
+      "lost": [
+        {
+          "account": "benq.com",
+          "website": "",
+          "industry": "",
+          "region": "APAC",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Viewed: Pricing page",
+            "Searching for: ai chatbot, ai search, large language models, personalization at scale"
+          ],
+          "note": "Active SAL Opportunity \u2014 visiting Shopify.com this week. Check salesforce for last touch date. Strong signal to reach out now.",
+          "days": 0,
+          "id": 33
+        }
+      ],
+      "new": [],
+      "eng": [
+        {
+          "account": "Chunghwa Telecom Co Ltd",
+          "website": "",
+          "industry": "",
+          "region": "APAC",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Viewed: Pricing page",
+            "Searching for: agentic commerce, ai chatbot, ai driven personalization, ai powered shopping"
+          ],
+          "note": "3 distinct Shopify page(s) visited this week, zero sales touches. Engagement score: 414 pts.",
+          "days": 0,
+          "id": 61
+        },
+        {
+          "account": "revvity.com",
+          "website": "",
+          "industry": "",
+          "region": "GCR",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Viewed: Pricing page"
+          ],
+          "note": "5 distinct Shopify page(s) visited this week, zero sales touches. Engagement score: 130 pts.",
+          "days": 0,
+          "id": 63
+        },
+        {
+          "account": "BOE Technology Group",
+          "website": "",
+          "industry": "",
+          "region": "GCR",
+          "engagement": [
+            "Viewed: Free trial page"
+          ],
+          "note": "1 distinct Shopify page(s) visited this week, zero sales touches. Engagement score: 57 pts.",
+          "days": 0,
+          "id": 75
+        }
+      ],
+      "unm": []
+    },
+    "Morris Bray": {
+      "mqa": [
+        {
+          "account": "Body Fit Training",
+          "website": "http://bodyfittraining.com",
+          "industry": "Health & Beauty (excl. Pharma)",
+          "region": "ANZ",
+          "engagement": [
+            "Engagement score: 89 pts this week \u00b7 316 page visits in last 30 days",
+            "Viewed: Free trial page",
+            "Viewed: Pricing page",
+            "Searching for: large language models, ai chatbot, ai search",
+            "Last active: 2026-03-21",
+            "Pipeline predict score: 43%"
+          ],
+          "note": "Hit MQA with zero sales touches. Primary intent: large language models.",
+          "days": 0,
+          "id": 19
+        }
+      ],
+      "lost": [],
+      "new": [],
+      "eng": [
+        {
+          "account": "Foodstuffs NZ",
+          "website": "",
+          "industry": "",
+          "region": "ANZ",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Viewed: Pricing page",
+            "Searching for: ai chatbot, ai search, large language models"
+          ],
+          "note": "3 distinct Shopify page(s) visited this week, zero sales touches. Engagement score: 51 pts.",
+          "days": 0,
+          "id": 78
+        }
+      ],
+      "unm": []
+    },
+    "Amaly Khairallah": {
+      "mqa": [],
+      "lost": [
+        {
+          "account": "Stryker (ANZ)",
+          "website": "",
+          "industry": "",
+          "region": "ANZ",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Viewed: Enterprise overview",
+            "Viewed: Pricing page",
+            "Searching for: agentic commerce, ai chatbot, ai commerce, ai driven personalization"
+          ],
+          "note": "Active SAL Opportunity \u2014 visiting Shopify.com this week. 8 sales touches in last 14 days. Strong signal to reach out now.",
+          "days": 0,
+          "id": 21
+        },
+        {
+          "account": "WOOP",
+          "website": "",
+          "industry": "",
+          "region": "ANZ",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Viewed: Pricing page",
+            "Searching for: agentic commerce, ai chatbot, ai generated product recommendations, ai search"
+          ],
+          "note": "Active SAL Opportunity \u2014 visiting Shopify.com this week. 3 sales touches in last 14 days. Strong signal to reach out now.",
+          "days": 0,
+          "id": 29
+        },
+        {
+          "account": "Department of Conservation (DOC)",
+          "website": "",
+          "industry": "",
+          "region": "ANZ",
+          "engagement": [
+            "Viewed: Free trial page"
+          ],
+          "note": "Active SAL Opportunity \u2014 visiting Shopify.com this week. 13 sales touches in last 14 days. Strong signal to reach out now.",
+          "days": 0,
+          "id": 35
+        }
+      ],
+      "new": [],
+      "eng": [],
+      "unm": []
+    },
+    "Eiji Hasegawa": {
+      "mqa": [],
+      "lost": [
+        {
+          "account": "Sony Group Corporation",
+          "website": "",
+          "industry": "",
+          "region": "Japan",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Viewed: Contact sales",
+            "Viewed: Pricing page",
+            "Viewed: Blog",
+            "Viewed: Point of Sale overview",
+            "Searching for: agentic commerce, ai chatbot, ai commerce, ai driven personalization"
+          ],
+          "note": "Active SAL Opportunity \u2014 visiting Shopify.com this week. 22 sales touches in last 14 days. Strong signal to reach out now.",
+          "days": 0,
+          "id": 22
+        }
+      ],
+      "new": [
+        {
+          "account": "istyle retail Inc.",
+          "website": "",
+          "industry": "",
+          "region": "APAC",
+          "engagement": [
+            "New contact: \u7d18\u5b50 \u5d8b (\u30de\u30fc\u30b1\u30c6\u30a3\u30f3\u30b0\u6226\u7565\u30b0\u30eb\u30fc\u30d7\u30de\u30cd\u30fc\u30b8\u30e3\u30fc)",
+            "First ever engagement: 2026-03-17"
+          ],
+          "note": "1 new contact engaging for the first time this week. Combined engagement: 5.0 pts.",
+          "days": 0,
+          "id": 59
+        }
+      ],
+      "eng": [],
+      "unm": []
+    },
+    "Tanabe Rika": {
+      "mqa": [],
+      "lost": [
+        {
+          "account": "Chikazawa lace",
+          "website": "",
+          "industry": "",
+          "region": "Japan",
+          "engagement": [
+            "Viewed: Pricing page"
+          ],
+          "note": "Active SAL Opportunity \u2014 visiting Shopify.com this week. 7 sales touches in last 14 days. Strong signal to reach out now.",
+          "days": 0,
+          "id": 23
+        },
+        {
+          "account": "Hankyu Hanshin Holdings, Inc.",
+          "website": "",
+          "industry": "",
+          "region": "Japan",
+          "engagement": [
+            "Viewed: Contact sales",
+            "Viewed: Enterprise overview",
+            "Viewed: Free trial page",
+            "Viewed: Pricing page"
+          ],
+          "note": "Active SAL Opportunity \u2014 visiting Shopify.com this week. 13 sales touches in last 14 days. Strong signal to reach out now.",
+          "days": 0,
+          "id": 24
+        }
+      ],
+      "new": [
+        {
+          "account": "Unicharm Corporation",
+          "website": "",
+          "industry": "",
+          "region": "APAC",
+          "engagement": [
+            "New contact: \u5343\u7d75 \u5ddd\u5d0e (\u30de\u30cd\u30fc\u30b8\u30e3\u30fc)",
+            "First ever engagement: 2026-03-17",
+            "Also new this week: \u82f1\u6a39 \u4e7e"
+          ],
+          "note": "2 new contacts engaging for the first time this week. Combined engagement: 10.0 pts.",
+          "days": 0,
+          "id": 46
+        },
+        {
+          "account": "BEAMS Co., Ltd. - paperboy/settin",
+          "website": "",
+          "industry": "",
+          "region": "APAC",
+          "engagement": [
+            "New contact: \u4eae\u592a \u5897\u6238 (\u8ab2\u9577)",
+            "First ever engagement: 2026-03-17",
+            "Also new this week: \u88d5\u8cb4 \u7530\u4e2d",
+            "Viewed: Pricing page"
+          ],
+          "note": "2 new contacts engaging for the first time this week. Combined engagement: 10.0 pts.",
+          "days": 0,
+          "id": 47
+        },
+        {
+          "account": "INTERMESTIC INC.",
+          "website": "",
+          "industry": "",
+          "region": "APAC",
+          "engagement": [
+            "New contact: \u611b \u77f3\u4e95 (\u306a\u3057)",
+            "First ever engagement: 2026-03-17"
+          ],
+          "note": "1 new contact engaging for the first time this week. Combined engagement: 5.0 pts.",
+          "days": 0,
+          "id": 58
+        }
+      ],
+      "eng": [],
+      "unm": []
+    },
+    "Chachi Apolinario": {
+      "mqa": [],
+      "lost": [
+        {
+          "account": "Forcast",
+          "website": "",
+          "industry": "",
+          "region": "ANZ",
+          "engagement": [
+            "Viewed: Pricing page",
+            "Viewed: Solutions"
+          ],
+          "note": "Active SAL Opportunity \u2014 visiting Shopify.com this week. 16 sales touches in last 14 days. Strong signal to reach out now.",
+          "days": 0,
+          "id": 28
+        }
+      ],
+      "new": [
+        {
+          "account": "CAD Group",
+          "website": "",
+          "industry": "",
+          "region": "APAC",
+          "engagement": [
+            "New contact: Eric Silcott (Vice President, Construction Division)",
+            "First ever engagement: 2026-03-16",
+            "Also new this week: Steven Soud, John Ayre"
+          ],
+          "note": "3 new contacts engaging for the first time this week. Combined engagement: 18.9 pts.",
+          "days": 0,
+          "id": 41
+        }
+      ],
+      "eng": [
+        {
+          "account": "Edith Cowan University",
+          "website": "",
+          "industry": "",
+          "region": "ANZ",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Viewed: Pricing page",
+            "Searching for: ai chatbot, ai search, large language models"
+          ],
+          "note": "3 distinct Shopify page(s) visited this week, zero sales touches. Engagement score: 72 pts.",
+          "days": 0,
+          "id": 66
+        },
+        {
+          "account": "Lotto New Zealand",
+          "website": "",
+          "industry": "",
+          "region": "ANZ",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Viewed: Point of Sale overview",
+            "Searching for: ai chatbot, ai search, business lending, large language models"
+          ],
+          "note": "4 distinct Shopify page(s) visited this week, zero sales touches. Engagement score: 67 pts.",
+          "days": 0,
+          "id": 68
+        },
+        {
+          "account": "FOXTEL",
+          "website": "",
+          "industry": "",
+          "region": "ANZ",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Viewed: Pricing page"
+          ],
+          "note": "2 distinct Shopify page(s) visited this week, zero sales touches. Engagement score: 65 pts.",
+          "days": 0,
+          "id": 70
+        }
+      ],
+      "unm": []
+    },
+    "Sally Xin": {
+      "mqa": [],
+      "lost": [
+        {
+          "account": "DJI China \u6df1\u5733\u5e02\u5927\u7586\u521b\u65b0\u79d1\u6280",
+          "website": "",
+          "industry": "",
+          "region": "GCR",
+          "engagement": [
+            "Viewed: Free trial page"
+          ],
+          "note": "Active SAL Opportunity \u2014 visiting Shopify.com this week. 6 sales touches in last 14 days. Strong signal to reach out now.",
+          "days": 0,
+          "id": 36
+        }
+      ],
+      "new": [],
+      "eng": [
+        {
+          "account": "\u2030\u220f\u2260\u00c1\u00ee\u00b5\u00ca\u220f\u00d8CECport",
+          "website": "",
+          "industry": "",
+          "region": "GCR",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Viewed: Pricing page",
+            "Searching for: ai commerce, ai search, cross border commerce, import and export"
+          ],
+          "note": "3 distinct Shopify page(s) visited this week, zero sales touches. Engagement score: 60 pts.",
+          "days": 0,
+          "id": 74
+        }
+      ],
+      "unm": []
+    },
+    "Yuki Tokunaga": {
+      "mqa": [],
+      "lost": [
+        {
+          "account": "ELECOM CO.,LTD.",
+          "website": "",
+          "industry": "",
+          "region": "Japan",
+          "engagement": [
+            "Viewed: Enterprise overview",
+            "Viewed: Free trial page",
+            "Viewed: Solutions"
+          ],
+          "note": "Active SAL Opportunity \u2014 visiting Shopify.com this week. 13 sales touches in last 14 days. Strong signal to reach out now.",
+          "days": 0,
+          "id": 38
+        }
+      ],
+      "new": [
+        {
+          "account": "Inuneko Seikatsu",
+          "website": "",
+          "industry": "",
+          "region": "APAC",
+          "engagement": [
+            "New contact: \u670b \u4f50\u85e4 (\u306a\u3057)",
+            "First ever engagement: 2026-03-09"
+          ],
+          "note": "1 new contact engaging for the first time this week. Combined engagement: 5.1 pts.",
+          "days": 0,
+          "id": 54
+        },
+        {
+          "account": "Gilt Groupe Tokyo HQ",
+          "website": "",
+          "industry": "",
+          "region": "APAC",
+          "engagement": [
+            "New contact: \u6b63\u535a \u4f50\u85e4 (\u30de\u30cd\u30fc\u30b8\u30e3\u30fc)",
+            "First ever engagement: 2026-03-17"
+          ],
+          "note": "1 new contact engaging for the first time this week. Combined engagement: 5.0 pts.",
+          "days": 0,
+          "id": 57
+        },
+        {
+          "account": "aigle",
+          "website": "",
+          "industry": "",
+          "region": "APAC",
+          "engagement": [
+            "New contact: Lejla Sahinovic (E-commerce Manager)",
+            "First ever engagement: 2026-03-18",
+            "Also new this week: Laura Roberti, Valentine Pinaut"
+          ],
+          "note": "3 new contacts engaging for the first time this week. Combined engagement: 3.2 pts.",
+          "days": 0,
+          "id": 60
+        }
+      ],
+      "eng": [
+        {
+          "account": "Hamada Sake Brewery Co., Ltd.",
+          "website": "",
+          "industry": "",
+          "region": "Japan",
+          "engagement": [
+            "Viewed: Pricing page"
+          ],
+          "note": "1 distinct Shopify page(s) visited this week, zero sales touches. Engagement score: 60 pts.",
+          "days": 0,
+          "id": 73
+        }
+      ],
+      "unm": []
+    },
+    "Kole Mahan": {
+      "mqa": [],
+      "lost": [
+        {
+          "account": "Solidteknics",
+          "website": "",
+          "industry": "",
+          "region": "ANZ",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Viewed: Pricing page"
+          ],
+          "note": "Active SAL Opportunity \u2014 visiting Shopify.com this week. 3 sales touches in last 14 days. Strong signal to reach out now.",
+          "days": 0,
+          "id": 39
+        }
+      ],
+      "new": [
+        {
+          "account": "Winarch Group",
+          "website": "",
+          "industry": "",
+          "region": "APAC",
+          "engagement": [
+            "New contact: Caroline McKenna (Head of ecom)",
+            "First ever engagement: 2026-03-18"
+          ],
+          "note": "1 new contact engaging for the first time this week. Combined engagement: 11.2 pts.",
+          "days": 0,
+          "id": 43
+        }
+      ],
+      "eng": [],
+      "unm": []
+    },
+    "Marty Nicholson": {
+      "mqa": [],
+      "lost": [],
+      "new": [
+        {
+          "account": "The Bulk Warehouse",
+          "website": "",
+          "industry": "",
+          "region": "APAC",
+          "engagement": [
+            "New contact: Henry Innes (Campaign Manager)",
+            "First ever engagement: 2026-03-17",
+            "Also new this week: Luke Chapman",
+            "Viewed: Free trial page"
+          ],
+          "note": "2 new contacts engaging for the first time this week. Combined engagement: 11.2 pts.",
+          "days": 0,
+          "id": 44
+        }
+      ],
+      "eng": [
+        {
+          "account": "twinklingtree.co",
+          "website": "",
+          "industry": "",
+          "region": "ANZ",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Viewed: Pricing page",
+            "Searching for: adobe commerce, adobe commerce cloud, affiliate marketing platform, agentic commerce"
+          ],
+          "note": "2 distinct Shopify page(s) visited this week, zero sales touches. Engagement score: 72 pts.",
+          "days": 0,
+          "id": 67
+        }
+      ],
+      "unm": []
+    },
+    "Yuki Kataoka": {
+      "mqa": [],
+      "lost": [],
+      "new": [
+        {
+          "account": "Bleu Bleuet Japan Ltd.",
+          "website": "",
+          "industry": "",
+          "region": "APAC",
+          "engagement": [
+            "New contact: \u6f64\u4e00 \u6cb3\u91ce (\u5ba4\u9577)",
+            "First ever engagement: 2026-03-16",
+            "Also new this week: \u8aa0 \u9ad8\u91ce"
+          ],
+          "note": "2 new contacts engaging for the first time this week. Combined engagement: 10.5 pts.",
+          "days": 0,
+          "id": 45
+        },
+        {
+          "account": "\uff08\u682a\uff09\u30d3\u30c3\u30b0\u30d2\u30c3\u30c8",
+          "website": "",
+          "industry": "",
+          "region": "APAC",
+          "engagement": [
+            "New contact: \u60a0\u4e00 \u6e21\u908a (\u30c1\u30fc\u30d5\u30de\u30cd\u30fc\u30b8\u30e3\u30fc)",
+            "First ever engagement: 2026-03-17"
+          ],
+          "note": "1 new contact engaging for the first time this week. Combined engagement: 5.0 pts.",
+          "days": 0,
+          "id": 56
+        }
+      ],
+      "eng": [],
+      "unm": []
+    },
+    "Jio Sotoyama": {
+      "mqa": [],
+      "lost": [],
+      "new": [
+        {
+          "account": "CASIO COMPUTER CO., LTD.",
+          "website": "",
+          "industry": "",
+          "region": "APAC",
+          "engagement": [
+            "New contact: \u5ee3\u6643 \u4e45\u4fdd (\u90e8\u9577)",
+            "First ever engagement: 2026-03-17"
+          ],
+          "note": "1 new contact engaging for the first time this week. Combined engagement: 5.0 pts.",
+          "days": 0,
+          "id": 55
+        }
+      ],
+      "eng": [
+        {
+          "account": "Kankyo Riken, Yk",
+          "website": "",
+          "industry": "",
+          "region": "Japan",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Viewed: Pricing page",
+            "Searching for: ai chatbot, ai powered shopping, ai search, ai search visibility"
+          ],
+          "note": "2 distinct Shopify page(s) visited this week, zero sales touches. Engagement score: 73 pts.",
+          "days": 0,
+          "id": 65
+        }
+      ],
+      "unm": []
+    },
+    "Weijie Neo": {
+      "mqa": [],
+      "lost": [],
+      "new": [],
+      "eng": [
+        {
+          "account": "2(SGP) Venture Corporation Limited SGX",
+          "website": "",
+          "industry": "",
+          "region": "SEA/ROA",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Viewed: Pricing page",
+            "Searching for: agentic commerce, ai chatbot, ai commerce, ai driven personalization"
+          ],
+          "note": "3 distinct Shopify page(s) visited this week, zero sales touches. Engagement score: 62 pts.",
+          "days": 0,
+          "id": 71
+        },
+        {
+          "account": "electronicscrazy",
+          "website": "",
+          "industry": "",
+          "region": "SEA/ROA",
+          "engagement": [
+            "Viewed: Free trial page",
+            "Viewed: Enterprise overview",
+            "Searching for: agentic commerce, ai chatbot, ai driven personalization, ai search"
+          ],
+          "note": "2 distinct Shopify page(s) visited this week, zero sales touches. Engagement score: 56 pts.",
+          "days": 0,
+          "id": 76
+        }
+      ],
+      "unm": []
+    }
+  }
+}

@@ -17,8 +17,9 @@ import urllib.request
 import urllib.error
 
 SCRIPT_DIR  = os.path.dirname(os.path.abspath(__file__))
-REPS_FILE   = os.path.join(SCRIPT_DIR, "data", "reps.json")
-HOT_FILE    = os.path.join(os.path.dirname(SCRIPT_DIR), "hot-this-week.json")
+REPS_FILE    = os.path.join(SCRIPT_DIR, "data", "reps.json")
+SIGNALS_FILE = os.path.join(SCRIPT_DIR, "data", "signals.json")
+HOT_FILE     = os.path.join(os.path.dirname(SCRIPT_DIR), "hot-this-week.json")
 SITE_URL    = "https://apacinsights.quick.shopify.io"
 
 SLACK_TOKEN = os.environ.get("SLACK_BOT_TOKEN", "")
@@ -56,44 +57,49 @@ def slack_post(channel, text, dry_run=False):
         return False
 
 
-def build_message(rep, hot_ideas, week_label):
+def build_message(rep, signals_by_ae, hot_ideas, week_label):
     name_first = rep["name"].split()[0]
     region = rep.get("region", "APAC")
     dashboard_url = f"{SITE_URL}/?seller={rep['slug']}"
 
-    high_priority_accs = [a for a in rep["accounts"] if a["priority"] == "High"]
-    intent_accs = [a for a in high_priority_accs if a["has_intent"]]
-    top_intent  = sorted(intent_accs, key=lambda x: -x["activity_count"])[:5]
+    buckets  = signals_by_ae.get(rep["name"], {})
+    mqas     = buckets.get("mqa",  [])
+    lost     = buckets.get("lost", [])
+    new_accs = buckets.get("new",  [])
+    eng      = buckets.get("eng",  [])
+    total    = len(mqas) + len(lost) + len(new_accs) + len(eng)
 
-    # Top intent topic (high priority only)
-    top_topics = {}
-    for a in intent_accs:
-        for t in a.get("intent_topics", []):
-            top_topics[t] = top_topics.get(t, 0) + 1
-    top_topic_str = sorted(top_topics.items(), key=lambda x: -x[1])[0][0] if top_topics else "—"
-
-    # Hot this week — top topic
     hot_topic = hot_ideas[0]["topic"] if hot_ideas else None
     hot_why   = hot_ideas[0]["why_trending"] if hot_ideas else ""
 
-    # Account list
-    acc_lines = ""
-    for a in top_intent:
-        topics = ", ".join(a["intent_topics"][:2]) if a["intent_topics"] else "general intent"
-        acc_lines += f"\n  • *{a['name']}* — {a['activity_count']} signals · _{topics}_"
+    # Signal summary line
+    parts = []
+    if mqas:     parts.append(f"*{len(mqas)} MQA{'s' if len(mqas)>1 else ''}*")
+    if lost:     parts.append(f"*{len(lost)} closed-lost reactivation{'s' if len(lost)>1 else ''}*")
+    if new_accs: parts.append(f"*{len(new_accs)} new account{'s' if len(new_accs)>1 else ''}*")
+    if eng:      parts.append(f"*{len(eng)} engaged contact{'s' if len(eng)>1 else ''}*")
+    summary = " · ".join(parts) if parts else "No new signals this week"
 
-    if not acc_lines and high_priority_accs:
-        acc_lines = "\n  No new intent signals this week."
-    elif not high_priority_accs:
-        acc_lines = "\n  Your region's account data is not yet connected — reach out to Shalini to get set up."
+    # Top accounts to highlight (MQAs first, then lost, then new)
+    highlights = (mqas + lost + new_accs)[:4]
+    acc_lines = ""
+    for a in highlights:
+        note = a.get("note", "")
+        score_match = next((e for e in a.get("engagement", []) if "Pipeline predict" in e), "")
+        score = score_match.replace("Pipeline predict score: ", "").strip() if score_match else ""
+        score_str = f" · {score}" if score else ""
+        acc_lines += f"\n  • *{a['account']}* ({a['industry']}){score_str}"
+        if note:
+            acc_lines += f"\n    _{note}_"
+
+    if not acc_lines:
+        acc_lines = "\n  No new signals this week — check back next Monday."
 
     message = f"""👋 Hey {name_first} — here's your {region} insights brief for *{week_label}*
 
-*Your high priority accounts at a glance:*
-• {len(high_priority_accs)} high priority accounts · {len(intent_accs)} showing active intent
-• Top intent theme this week: *{top_topic_str}*
+*This week's signals:* {summary}
 
-*High priority accounts with the most signals:*{acc_lines}"""
+*Accounts to prioritise:*{acc_lines}"""
 
     if hot_topic:
         message += f"""
@@ -116,8 +122,11 @@ def main():
     parser.add_argument("--rep",     help="Slug of a single rep to send to (e.g. lauren_critten)")
     args = parser.parse_args()
 
-    with open(REPS_FILE)  as f: reps_data = json.load(f)
-    with open(HOT_FILE)   as f: hot_data  = json.load(f)
+    with open(REPS_FILE)    as f: reps_data    = json.load(f)
+    with open(SIGNALS_FILE) as f: signals_data = json.load(f)
+    with open(HOT_FILE)     as f: hot_data     = json.load(f)
+
+    signals_by_ae = signals_data.get("by_ae", {})
 
     week_label = hot_data.get("week", "this week")
     hot_ideas  = hot_data.get("ideas", [])
@@ -134,7 +143,7 @@ def main():
 
     ok = 0
     for rep in reps:
-        msg = build_message(rep, hot_ideas, week_label)
+        msg = build_message(rep, signals_by_ae, hot_ideas, week_label)
         label = f"{rep['name']} ({rep['slack_id']})"
         if slack_post(rep["slack_id"], msg, dry_run=args.dry_run):
             print(f"  ✓ {label}")
