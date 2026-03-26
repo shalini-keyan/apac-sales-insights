@@ -30,5 +30,9 @@ echo ""
 echo "✅ Done! Visit https://apacinsights.quick.shopify.io"
 
 echo ""
-echo "📬 Sending weekly Slack DMs to ANZ reps..."
+echo "📬 Sending weekly Slack DMs to all APAC reps..."
 $PYTHON "$SCRIPT_DIR/send-weekly-dms.py"
+
+echo ""
+echo "📢 Sending weekly channel summaries to leads..."
+$PYTHON "$SCRIPT_DIR/send-weekly-summaries.py"
