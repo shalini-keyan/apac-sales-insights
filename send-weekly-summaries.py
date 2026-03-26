@@ -15,15 +15,14 @@ Usage:
   python3 send-weekly-summaries.py --region anz # send one region only
 """
 
-import json, os, sys, argparse, urllib.request, urllib.error
+import json, os, sys, argparse
+from slack_utils import slack_post
 
 SCRIPT_DIR   = os.path.dirname(os.path.abspath(__file__))
 SIGNALS_FILE = os.path.join(SCRIPT_DIR, "data", "signals.json")
 REPS_FILE    = os.path.join(SCRIPT_DIR, "data", "reps.json")
 HOT_FILE     = os.path.join(os.path.dirname(SCRIPT_DIR), "hot-this-week.json")
 SITE_URL     = "https://apacinsights.quick.shopify.io"
-SLACK_TOKEN  = os.environ.get("SLACK_BOT_TOKEN", "")
-
 # ── Destinations ──────────────────────────────────────────────────────────────
 DESTINATIONS = {
     "anz": {
@@ -58,31 +57,6 @@ DESTINATIONS = {
 }
 
 
-def slack_post(target, text, dry_run=False):
-    if dry_run:
-        print(f"\n{'─'*60}")
-        print(f"TO: {target}")
-        print(text.encode("utf-8", errors="replace").decode("utf-8"))
-        return True
-    if not SLACK_TOKEN:
-        print("ERROR: SLACK_BOT_TOKEN not set.")
-        sys.exit(1)
-    payload = json.dumps({"channel": target, "text": text}).encode()
-    req = urllib.request.Request(
-        "https://slack.com/api/chat.postMessage",
-        data=payload,
-        headers={"Authorization": f"Bearer {SLACK_TOKEN}", "Content-Type": "application/json"},
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            data = json.loads(resp.read())
-            if not data.get("ok"):
-                print(f"  Slack error: {data.get('error')}")
-                return False
-            return True
-    except urllib.error.URLError as e:
-        print(f"  Request failed: {e}")
-        return False
 
 
 def get_pipeline_score(acc):

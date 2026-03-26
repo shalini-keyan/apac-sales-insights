@@ -10,7 +10,7 @@
   <array>
     <string>/bin/zsh</string>
     <string>-c</string>
-    <string>export SLACK_BOT_TOKEN="YOUR_SLACK_BOT_TOKEN_HERE" &amp;&amp; /Users/shalini.keyan/Cursor\ Workspaces/outline/anz-sales-insights/deploy.sh >> /tmp/anz-sales-insights.log 2>&amp;1</string>
+    <string>/Users/shalini.keyan/Cursor\ Workspaces/outline/anz-sales-insights/deploy.sh >> /tmp/anz-sales-insights.log 2>&amp;1</string>
   </array>
 
   <!-- Every Monday at 11:00 AM -->

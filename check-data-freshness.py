@@ -9,13 +9,13 @@ Exit codes:
   1 = stale files detected, warning sent (pipeline aborts)
 """
 
-import os, sys, json, time, urllib.request, urllib.error
-from datetime import datetime, timedelta
+import os, sys, json, time
+from datetime import datetime
+from slack_utils import slack_post
 
-SCRIPT_DIR   = os.path.dirname(os.path.abspath(__file__))
-PARENT_DIR   = os.path.dirname(SCRIPT_DIR)
-SLACK_TOKEN  = os.environ.get("SLACK_BOT_TOKEN", "")
-SHALINI_ID   = "U08E254T9DW"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PARENT_DIR = os.path.dirname(SCRIPT_DIR)
+SHALINI_ID = "U08E254T9DW"
 
 # Files that must be updated within the last 7 days
 FILES_TO_CHECK = {
@@ -38,25 +38,7 @@ def file_age_days(path):
 
 
 def slack_dm(text, dry_run=False):
-    if dry_run:
-        print(text.encode("utf-8", errors="replace").decode("utf-8"))
-        return
-    if not SLACK_TOKEN:
-        print("WARNING: SLACK_BOT_TOKEN not set — cannot send Slack warning.")
-        return
-    payload = json.dumps({"channel": SHALINI_ID, "text": text}).encode()
-    req = urllib.request.Request(
-        "https://slack.com/api/chat.postMessage",
-        data=payload,
-        headers={"Authorization": f"Bearer {SLACK_TOKEN}", "Content-Type": "application/json"},
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            data = json.loads(resp.read())
-            if not data.get("ok"):
-                print(f"Slack error: {data.get('error')}")
-    except urllib.error.URLError as e:
-        print(f"Request failed: {e}")
+    slack_post(SHALINI_ID, text, dry_run=dry_run)
 
 
 def main():
