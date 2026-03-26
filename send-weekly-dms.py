@@ -60,12 +60,16 @@ def build_message(rep, hot_ideas, week_label):
     name_first = rep["name"].split()[0]
     dashboard_url = f"{SITE_URL}/?seller={rep['slug']}"
 
-    intent_accs = [a for a in rep["accounts"] if a["has_intent"]]
+    high_priority_accs = [a for a in rep["accounts"] if a["priority"] == "High"]
+    intent_accs = [a for a in high_priority_accs if a["has_intent"]]
     top_intent  = sorted(intent_accs, key=lambda x: -x["activity_count"])[:5]
 
-    # Top intent topic
-    top_topics = rep.get("top_intent_topics", [])
-    top_topic_str = top_topics[0]["topic"] if top_topics else "—"
+    # Top intent topic (high priority only)
+    top_topics = {}
+    for a in intent_accs:
+        for t in a.get("intent_topics", []):
+            top_topics[t] = top_topics.get(t, 0) + 1
+    top_topic_str = sorted(top_topics.items(), key=lambda x: -x[1])[0][0] if top_topics else "—"
 
     # Hot this week — top topic
     hot_topic = hot_ideas[0]["topic"] if hot_ideas else None
@@ -82,11 +86,11 @@ def build_message(rep, hot_ideas, week_label):
 
     message = f"""👋 Hey {name_first} — here's your ANZ insights brief for *{week_label}*
 
-*Your BoB at a glance:*
-• {rep['total_accounts']} accounts in book · {rep['intent_count']} showing active intent · {rep['high_priority']} high priority
+*Your high priority accounts at a glance:*
+• {len(high_priority_accs)} high priority accounts · {len(intent_accs)} showing active intent
 • Top intent theme this week: *{top_topic_str}*
 
-*Accounts with the most signals:*{acc_lines}"""
+*High priority accounts with the most signals:*{acc_lines}"""
 
     if hot_topic:
         message += f"""
