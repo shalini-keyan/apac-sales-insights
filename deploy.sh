@@ -7,6 +7,15 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DEPLOY_DIR="/tmp/anz-sales-insights-deploy"
 PYTHON=/Users/shalini.keyan/.local/bin/python3.12
 
+echo "🔍 Checking data freshness..."
+$PYTHON "$SCRIPT_DIR/check-data-freshness.py"
+if [ $? -ne 0 ]; then
+  echo ""
+  echo "⛔ Pipeline aborted — stale data detected. Check your Slack DM for details."
+  exit 1
+fi
+
+echo ""
 echo "📡 Extracting signals from apac-insights-hub..."
 $PYTHON "$SCRIPT_DIR/extract-signals.py"
 
