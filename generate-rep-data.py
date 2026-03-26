@@ -19,12 +19,26 @@ INTENT_CSV = os.path.join(PARENT_DIR, "high_priority_intent_engaged_overlap.csv"
 OUTPUT_FILE = os.path.join(SCRIPT_DIR, "data", "reps.json")
 
 REP_SLUGS = {
-    "Lauren Critten":    {"slug": "lauren_critten",    "slack_id": "U0A6QMG9G6A"},
-    "Shane Kilgour":     {"slug": "shane_kilgour",     "slack_id": "W018304GAFR"},
-    "Chachi Apolinario": {"slug": "chachi_apolinario", "slack_id": "U02EF43RWPK"},
-    "Kole Mahan":        {"slug": "kole_mahan",        "slack_id": "U08L5ALENDP"},
-    "Bronte Hogarth":    {"slug": "bronte_hogarth",    "slack_id": "W018HNGSV42"},
-    "Dugald Todd":       {"slug": "dugald_todd",       "slack_id": "U02E6T5QS72"},
+    # ANZ
+    "Lauren Critten":    {"slug": "lauren_critten",    "slack_id": "U0A6QMG9G6A", "region": "ANZ"},
+    "Shane Kilgour":     {"slug": "shane_kilgour",     "slack_id": "W018304GAFR", "region": "ANZ"},
+    "Chachi Apolinario": {"slug": "chachi_apolinario", "slack_id": "U02EF43RWPK", "region": "ANZ"},
+    "Kole Mahan":        {"slug": "kole_mahan",        "slack_id": "U08L5ALENDP", "region": "ANZ"},
+    "Bronte Hogarth":    {"slug": "bronte_hogarth",    "slack_id": "W018HNGSV42", "region": "ANZ"},
+    "Dugald Todd":       {"slug": "dugald_todd",       "slack_id": "U02E6T5QS72", "region": "ANZ"},
+    "Amaly Khairallah":  {"slug": "amaly_khairallah",  "slack_id": "U02SMB9U6K0", "region": "ANZ"},
+    "Karim Lalji":       {"slug": "karim_lalji",       "slack_id": "W018GBPHJKF", "region": "ANZ"},
+    "Nikhil Sareen":     {"slug": "nikhil_sareen",     "slack_id": "W01AN7QDM50", "region": "India"},
+    # Japan
+    "Eiji Hasegawa":     {"slug": "eiji_hasegawa",     "slack_id": "U02U5EF09S5", "region": "Japan"},
+    "Jio Sotoyama":      {"slug": "jio_sotoyama",      "slack_id": "U03189KSEMP", "region": "Japan"},
+    "Tanabe Rika":       {"slug": "tanabe_rika",       "slack_id": "U05UHRMKVK4", "region": "Japan"},
+    "Yuki Kataoka":      {"slug": "yuki_kataoka",      "slack_id": "U07UDMS1ALA", "region": "Japan"},
+    "Yuki Tokunaga":     {"slug": "yuki_tokunaga",     "slack_id": "U098TAZDS58", "region": "Japan"},
+    # SEA
+    "Anwei Sun":         {"slug": "anwei_sun",         "slack_id": "U06DZEXB20J", "region": "SEA"},
+    "Rae Chang":         {"slug": "rae_chang",         "slack_id": "U077GJY8CAZ", "region": "SEA"},
+    "Sally Xin":         {"slug": "sally_xin",         "slack_id": "U087GD8AN06", "region": "SEA"},
 }
 
 INTENT_TOPIC_LABELS = {
@@ -131,6 +145,7 @@ def build_reps_json(accounts, intent_map):
             "name":            rep_name,
             "slug":            info["slug"],
             "slack_id":        info["slack_id"],
+            "region":          info.get("region", "APAC"),
             "total_accounts":  len(accs),
             "high_priority":   len(high_priority),
             "intent_count":    intent_count,

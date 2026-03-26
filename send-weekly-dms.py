@@ -58,6 +58,7 @@ def slack_post(channel, text, dry_run=False):
 
 def build_message(rep, hot_ideas, week_label):
     name_first = rep["name"].split()[0]
+    region = rep.get("region", "APAC")
     dashboard_url = f"{SITE_URL}/?seller={rep['slug']}"
 
     high_priority_accs = [a for a in rep["accounts"] if a["priority"] == "High"]
@@ -81,10 +82,12 @@ def build_message(rep, hot_ideas, week_label):
         topics = ", ".join(a["intent_topics"][:2]) if a["intent_topics"] else "general intent"
         acc_lines += f"\n  • *{a['name']}* — {a['activity_count']} signals · _{topics}_"
 
-    if not acc_lines:
+    if not acc_lines and high_priority_accs:
         acc_lines = "\n  No new intent signals this week."
+    elif not high_priority_accs:
+        acc_lines = "\n  Your region's account data is not yet connected — reach out to Shalini to get set up."
 
-    message = f"""👋 Hey {name_first} — here's your ANZ insights brief for *{week_label}*
+    message = f"""👋 Hey {name_first} — here's your {region} insights brief for *{week_label}*
 
 *Your high priority accounts at a glance:*
 • {len(high_priority_accs)} high priority accounts · {len(intent_accs)} showing active intent
@@ -95,7 +98,7 @@ def build_message(rep, hot_ideas, week_label):
     if hot_topic:
         message += f"""
 
-*🔥 Hot topic across ANZ this week: {hot_topic}*
+*🔥 Hot topic across APAC this week: {hot_topic}*
 _{hot_why}_"""
 
     message += f"""

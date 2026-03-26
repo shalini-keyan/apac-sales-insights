@@ -1,11 +1,12 @@
 {
-  "generated": "2026-03-26T00:15:22.455897Z",
+  "generated": "2026-03-26T00:49:11.801530Z",
   "site_url": "https://apacinsights.quick.shopify.io",
   "reps": [
     {
       "name": "Shane Kilgour",
       "slug": "shane_kilgour",
       "slack_id": "W018304GAFR",
+      "region": "ANZ",
       "total_accounts": 136,
       "high_priority": 136,
       "intent_count": 23,
@@ -2024,6 +2025,7 @@
       "name": "Chachi Apolinario",
       "slug": "chachi_apolinario",
       "slack_id": "U02EF43RWPK",
+      "region": "ANZ",
       "total_accounts": 144,
       "high_priority": 144,
       "intent_count": 20,
@@ -4140,6 +4142,7 @@
       "name": "Kole Mahan",
       "slug": "kole_mahan",
       "slack_id": "U08L5ALENDP",
+      "region": "ANZ",
       "total_accounts": 64,
       "high_priority": 64,
       "intent_count": 6,
@@ -5088,6 +5091,7 @@
       "name": "Lauren Critten",
       "slug": "lauren_critten",
       "slack_id": "U0A6QMG9G6A",
+      "region": "ANZ",
       "total_accounts": 29,
       "high_priority": 29,
       "intent_count": 2,
@@ -5528,6 +5532,7 @@
       "name": "Bronte Hogarth",
       "slug": "bronte_hogarth",
       "slack_id": "W018HNGSV42",
+      "region": "ANZ",
       "total_accounts": 43,
       "high_priority": 43,
       "intent_count": 2,
@@ -6171,6 +6176,7 @@
       "name": "Dugald Todd",
       "slug": "dugald_todd",
       "slack_id": "U02E6T5QS72",
+      "region": "ANZ",
       "total_accounts": 2,
       "high_priority": 2,
       "intent_count": 0,
@@ -6205,6 +6211,127 @@
           "account_id": ""
         }
       ]
+    },
+    {
+      "name": "Amaly Khairallah",
+      "slug": "amaly_khairallah",
+      "slack_id": "U02SMB9U6K0",
+      "region": "ANZ",
+      "total_accounts": 0,
+      "high_priority": 0,
+      "intent_count": 0,
+      "top_intent_topics": [],
+      "accounts": []
+    },
+    {
+      "name": "Karim Lalji",
+      "slug": "karim_lalji",
+      "slack_id": "W018GBPHJKF",
+      "region": "ANZ",
+      "total_accounts": 0,
+      "high_priority": 0,
+      "intent_count": 0,
+      "top_intent_topics": [],
+      "accounts": []
+    },
+    {
+      "name": "Nikhil Sareen",
+      "slug": "nikhil_sareen",
+      "slack_id": "W01AN7QDM50",
+      "region": "India",
+      "total_accounts": 0,
+      "high_priority": 0,
+      "intent_count": 0,
+      "top_intent_topics": [],
+      "accounts": []
+    },
+    {
+      "name": "Eiji Hasegawa",
+      "slug": "eiji_hasegawa",
+      "slack_id": "U02U5EF09S5",
+      "region": "Japan",
+      "total_accounts": 0,
+      "high_priority": 0,
+      "intent_count": 0,
+      "top_intent_topics": [],
+      "accounts": []
+    },
+    {
+      "name": "Jio Sotoyama",
+      "slug": "jio_sotoyama",
+      "slack_id": "U03189KSEMP",
+      "region": "Japan",
+      "total_accounts": 0,
+      "high_priority": 0,
+      "intent_count": 0,
+      "top_intent_topics": [],
+      "accounts": []
+    },
+    {
+      "name": "Tanabe Rika",
+      "slug": "tanabe_rika",
+      "slack_id": "U05UHRMKVK4",
+      "region": "Japan",
+      "total_accounts": 0,
+      "high_priority": 0,
+      "intent_count": 0,
+      "top_intent_topics": [],
+      "accounts": []
+    },
+    {
+      "name": "Yuki Kataoka",
+      "slug": "yuki_kataoka",
+      "slack_id": "U07UDMS1ALA",
+      "region": "Japan",
+      "total_accounts": 0,
+      "high_priority": 0,
+      "intent_count": 0,
+      "top_intent_topics": [],
+      "accounts": []
+    },
+    {
+      "name": "Yuki Tokunaga",
+      "slug": "yuki_tokunaga",
+      "slack_id": "U098TAZDS58",
+      "region": "Japan",
+      "total_accounts": 0,
+      "high_priority": 0,
+      "intent_count": 0,
+      "top_intent_topics": [],
+      "accounts": []
+    },
+    {
+      "name": "Anwei Sun",
+      "slug": "anwei_sun",
+      "slack_id": "U06DZEXB20J",
+      "region": "SEA",
+      "total_accounts": 0,
+      "high_priority": 0,
+      "intent_count": 0,
+      "top_intent_topics": [],
+      "accounts": []
+    },
+    {
+      "name": "Rae Chang",
+      "slug": "rae_chang",
+      "slack_id": "U077GJY8CAZ",
+      "region": "SEA",
+      "total_accounts": 0,
+      "high_priority": 0,
+      "intent_count": 0,
+      "top_intent_topics": [],
+      "accounts": []
+    },
+    {
+      "name": "Sally Xin",
+      "slug": "sally_xin",
+      "slack_id": "U087GD8AN06",
+      "region": "SEA",
+      "total_accounts": 0,
+      "high_priority": 0,
+      "intent_count": 0,
+      "top_intent_topics": [],
+      "accounts": []
     }
   ]
 }
