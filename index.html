@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANZ Sales Insights</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:        #0a0a0a;
+      --surface:   #111111;
+      --border:    #1f1f1f;
+      --green:     #00d27a;
+      --green-dim: #00d27a22;
+      --amber:     #f5a623;
+      --amber-dim: #f5a62322;
+      --red:       #ff4d4d;
+      --red-dim:   #ff4d4d18;
+      --text:      #e8e8e8;
+      --muted:     #666;
+      --label:     #999;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 20px 32px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .logo {
+      width: 28px; height: 28px;
+      background: var(--green);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 13px; color: #000;
+    }
+    header h1 { font-size: 15px; font-weight: 500; letter-spacing: -0.3px; }
+    header .week-badge {
+      margin-left: auto;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+
+    /* ── Layout ── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 32px; }
+
+    /* ── Rep selector ── */
+    .rep-nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+    .rep-btn {
+      padding: 6px 14px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--label);
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      transition: all 0.15s;
+    }
+    .rep-btn:hover { border-color: var(--green); color: var(--text); }
+    .rep-btn.active {
+      background: var(--green-dim);
+      border-color: var(--green);
+      color: var(--green);
+      font-weight: 500;
+    }
+
+    /* ── Stats row ── */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+    .stat-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .stat-value {
+      font-family: 'DM Mono', monospace;
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1;
+    }
+    .stat-value.green { color: var(--green); }
+    .stat-value.amber { color: var(--amber); }
+    .stat-sub {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* ── Two column layout ── */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 20px;
+      align-items: start;
+    }
+
+    /* ── Panel ── */
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .panel-header {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .panel-title {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--label);
+    }
+    .panel-count {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* ── Accounts table ── */
+    .account-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      padding: 13px 20px;
+      border-bottom: 1px solid var(--border);
+      align-items: center;
+      transition: background 0.1s;
+    }
+    .account-row:last-child { border-bottom: none; }
+    .account-row:hover { background: #ffffff06; }
+    .account-row.has-intent { border-left: 2px solid var(--green); padding-left: 18px; }
+    .account-name { font-weight: 500; font-size: 13px; }
+    .account-meta { font-size: 11px; color: var(--muted); margin-top: 2px; }
+    .account-right { text-align: right; }
+    .activity-count {
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: var(--green);
+      font-weight: 500;
+    }
+    .no-intent { color: var(--muted); font-size: 11px; }
+
+    /* ── Intent tags ── */
+    .tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+    .tag {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 3px;
+      background: var(--green-dim);
+      color: var(--green);
+      font-family: 'DM Mono', monospace;
+    }
+    .tag.ai    { background: #7c3aed22; color: #a78bfa; }
+    .tag.comp  { background: var(--amber-dim); color: var(--amber); }
+    .tag.pos   { background: var(--red-dim); color: var(--red); }
+
+    /* ── Hot topics panel ── */
+    .topic-row {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .topic-row:last-child { border-bottom: none; }
+    .topic-name {
+      font-weight: 500;
+      font-size: 13px;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .topic-bar-wrap {
+      height: 3px;
+      background: var(--border);
+      border-radius: 2px;
+      margin: 6px 0 4px;
+    }
+    .topic-bar {
+      height: 3px;
+      background: var(--green);
+      border-radius: 2px;
+    }
+    .topic-count {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+    }
+
+    /* ── Hot this week panel ── */
+    .hot-row {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hot-row:last-child { border-bottom: none; }
+    .hot-rank {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .hot-topic {
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--green);
+      margin-bottom: 4px;
+    }
+    .hot-why {
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ── Search ── */
+    .search-wrap { padding: 12px 20px; border-bottom: 1px solid var(--border); }
+    .search-input {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 7px 12px;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      outline: none;
+    }
+    .search-input::placeholder { color: var(--muted); }
+    .search-input:focus { border-color: var(--green); }
+
+    /* ── Footer ── */
+    footer {
+      padding: 24px 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+    footer .footer-note { font-size: 11px; color: var(--muted); }
+    footer a { color: var(--green); text-decoration: none; }
+
+    /* ── Empty state ── */
+    .empty {
+      padding: 40px 20px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 768px) {
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .grid-2 { grid-template-columns: 1fr; }
+      .container { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">A</div>
+  <h1>ANZ Sales Insights</h1>
+  <div class="week-badge" id="weekBadge">Loading…</div>
+</header>
+
+<div class="container">
+
+  <!-- Rep nav -->
+  <div class="rep-nav" id="repNav"></div>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-label">Total BoB</div>
+      <div class="stat-value" id="statTotal">—</div>
+      <div class="stat-sub">accounts in book</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Active Intent</div>
+      <div class="stat-value green" id="statIntent">—</div>
+      <div class="stat-sub">showing signals (30d)</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">High Priority</div>
+      <div class="stat-value amber" id="statHigh">—</div>
+      <div class="stat-sub">priority accounts</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Intent Rate</div>
+      <div class="stat-value" id="statRate">—</div>
+      <div class="stat-sub">of BoB is active</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+
+    <!-- Accounts panel -->
+    <div>
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">Priority Accounts</span>
+          <span class="panel-count" id="accountCount"></span>
+        </div>
+        <div class="search-wrap">
+          <input class="search-input" id="searchInput" placeholder="Search accounts…" />
+        </div>
+        <div id="accountsList"></div>
+      </div>
+    </div>
+
+    <!-- Right column -->
+    <div style="display:flex;flex-direction:column;gap:20px;">
+
+      <!-- Top intent topics -->
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">Top Intent Topics</span>
+        </div>
+        <div id="topicsList"></div>
+      </div>
+
+      <!-- Hot this week -->
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">Hot This Week</span>
+          <span class="panel-count" id="hotCount"></span>
+        </div>
+        <div id="hotList"></div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span class="footer-note">
+    ANZ Marketing · Data: Demandbase + Salesforce ·
+    <a href="https://apacinsights.quick.shopify.io">apacinsights.quick.shopify.io</a>
+  </span>
+  <span class="footer-note" id="generatedAt"></span>
+</footer>
+
+<script>
+  const SITE_URL = 'https://apacinsights.quick.shopify.io';
+
+  function tagClass(topic) {
+    if (/ai|agentic/i.test(topic))    return 'ai';
+    if (/comp|pos/i.test(topic))      return 'comp';
+    return '';
+  }
+
+  function formatDate(iso) {
+    if (!iso) return '';
+    try {
+      return new Date(iso).toLocaleDateString('en-AU', { day: 'numeric', month: 'short' });
+    } catch { return ''; }
+  }
+
+  function renderAccounts(rep, filter = '') {
+    const list = document.getElementById('accountsList');
+    const count = document.getElementById('accountCount');
+    let accounts = rep.accounts;
+
+    if (filter) {
+      const q = filter.toLowerCase();
+      accounts = accounts.filter(a =>
+        a.name.toLowerCase().includes(q) ||
+        a.industry.toLowerCase().includes(q) ||
+        (a.intent_topics || []).some(t => t.toLowerCase().includes(q))
+      );
+    }
+
+    count.textContent = `${accounts.length} accounts`;
+
+    if (!accounts.length) {
+      list.innerHTML = '<div class="empty">No accounts match your search.</div>';
+      return;
+    }
+
+    list.innerHTML = accounts.map(a => {
+      const intentHtml = a.has_intent
+        ? `<div class="activity-count">${a.activity_count}<span style="font-size:10px;color:var(--muted);font-weight:400"> signals</span></div>
+           <div style="font-size:10px;color:var(--muted)">${formatDate(a.latest_activity)}</div>`
+        : `<div class="no-intent">—</div>`;
+
+      const tagsHtml = a.has_intent && a.intent_topics.length
+        ? `<div class="tags">${a.intent_topics.slice(0, 3).map(t =>
+            `<span class="tag ${tagClass(t)}">${t}</span>`).join('')}</div>`
+        : '';
+
+      return `
+        <div class="account-row ${a.has_intent ? 'has-intent' : ''}">
+          <div>
+            <div class="account-name">${a.name}</div>
+            <div class="account-meta">${a.industry}${a.state ? ' · ' + a.state : ''} · ${a.bob}</div>
+            ${tagsHtml}
+          </div>
+          <div class="account-right">${intentHtml}</div>
+        </div>`;
+    }).join('');
+  }
+
+  function renderTopics(rep) {
+    const list = document.getElementById('topicsList');
+    const topics = rep.top_intent_topics || [];
+    if (!topics.length) {
+      list.innerHTML = '<div class="empty">No intent data.</div>';
+      return;
+    }
+    const max = topics[0].count;
+    list.innerHTML = topics.map(t => `
+      <div class="topic-row">
+        <div class="topic-name">
+          ${t.topic}
+          <span class="topic-count">${t.count} acct${t.count !== 1 ? 's' : ''}</span>
+        </div>
+        <div class="topic-bar-wrap">
+          <div class="topic-bar" style="width:${Math.round(t.count / max * 100)}%"></div>
+        </div>
+      </div>`).join('');
+  }
+
+  function renderStats(rep) {
+    document.getElementById('statTotal').textContent  = rep.total_accounts;
+    document.getElementById('statIntent').textContent = rep.intent_count;
+    document.getElementById('statHigh').textContent   = rep.high_priority;
+    const rate = rep.total_accounts
+      ? Math.round(rep.intent_count / rep.total_accounts * 100) + '%'
+      : '—';
+    document.getElementById('statRate').textContent = rate;
+  }
+
+  function renderHot(ideas) {
+    const list = document.getElementById('hotList');
+    const count = document.getElementById('hotCount');
+    if (!ideas || !ideas.length) {
+      list.innerHTML = '<div class="empty">No hot topics this week.</div>';
+      return;
+    }
+    count.textContent = `${ideas.length} topics`;
+    list.innerHTML = ideas.map((idea, i) => `
+      <div class="hot-row">
+        <div class="hot-rank">#${i + 1} · ${idea.signal_count} signal${idea.signal_count !== 1 ? 's' : ''}</div>
+        <div class="hot-topic">${idea.topic}</div>
+        <div class="hot-why">${idea.why_trending}</div>
+      </div>`).join('');
+  }
+
+  function selectRep(rep, allReps) {
+    document.querySelectorAll('.rep-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.slug === rep.slug);
+    });
+    const url = new URL(window.location);
+    url.searchParams.set('seller', rep.slug);
+    history.replaceState({}, '', url);
+    renderStats(rep);
+    renderAccounts(rep, document.getElementById('searchInput').value);
+    renderTopics(rep);
+  }
+
+  async function init() {
+    const [repsRes, hotRes] = await Promise.all([
+      fetch('./data/reps.json'),
+      fetch('./hot-this-week.json'),
+    ]);
+    const repsData = await repsRes.json();
+    const hotData  = await hotRes.json();
+
+    document.getElementById('weekBadge').textContent     = hotData.week || '';
+    document.getElementById('generatedAt').textContent   =
+      'Updated ' + new Date(repsData.generated).toLocaleString('en-AU', { dateStyle: 'medium', timeStyle: 'short' });
+
+    renderHot(hotData.ideas);
+
+    const params = new URLSearchParams(window.location.search);
+    const sellerSlug = params.get('seller');
+
+    const nav = document.getElementById('repNav');
+    nav.innerHTML = repsData.reps.map(r => `
+      <button class="rep-btn" data-slug="${r.slug}">${r.name.split(' ')[0]} ${r.name.split(' ')[1]}</button>
+    `).join('');
+
+    let activeRep = repsData.reps.find(r => r.slug === sellerSlug) || repsData.reps[0];
+
+    document.querySelectorAll('.rep-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const rep = repsData.reps.find(r => r.slug === btn.dataset.slug);
+        if (rep) { activeRep = rep; selectRep(rep, repsData.reps); }
+      });
+    });
+
+    document.getElementById('searchInput').addEventListener('input', e => {
+      renderAccounts(activeRep, e.target.value);
+    });
+
+    selectRep(activeRep, repsData.reps);
+  }
+
+  init().catch(err => {
+    document.getElementById('accountsList').innerHTML =
+      `<div class="empty">Failed to load data: ${err.message}</div>`;
+  });
+</script>
+
+</body>
+</html>
